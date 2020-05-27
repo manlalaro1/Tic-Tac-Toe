@@ -61,7 +61,7 @@ def take_inputs(board, player):
 
         if board[row][col] != "_":
             print("That index has already been used, try again.")
-            take_inputs(board, player)
+            return take_inputs(board, player)
         elif row < 0 or col < 0:
             print("Use positive integers.")
             raise ValueError
